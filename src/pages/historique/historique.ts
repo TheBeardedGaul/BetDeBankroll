@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-page2',
-  templateUrl: 'page2.html'
+  selector: 'page-historique',
+  templateUrl: 'historique.html'
 })
-export class Page2 {
+export class Historique {
+  static pageName: string = "Historique";
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
@@ -31,7 +32,7 @@ export class Page2 {
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(Page2, {
+    this.navCtrl.push(Historique, {
       item: item
     });
   }
